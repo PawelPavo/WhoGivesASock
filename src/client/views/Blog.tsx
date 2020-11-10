@@ -6,8 +6,13 @@ const Blog = (props: BlogProps) => {
         <>
             {/* <NavigationBar /> */}
             <div className="container">
-                <div className="d-flex justify-content-center align-items-center">
-                    <h1 className="display-1">Blog</h1>
+                <div className="row d-flex justify-content-center align-items-center font-weight-lighter text-primary bg-light p-5">
+                    <div className="row display-1 text-center p-5 font-weight-lighter">
+                        Under Construction...
+                    </div>
+                    <div className="row">
+                        <h1 className="font-weight-light">We will be blogging soon.</h1>
+                    </div>
                 </div>
             </div>
         </>

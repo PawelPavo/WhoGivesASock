@@ -11,7 +11,7 @@ const NavigationBar = (props: NavigationBarProps) => {
         <Layout>
             <div className="row d-flex justify-content-center">
                 <a href="http://paweljaskolski.com/" target="_blank" className="text-muted">
-                    <small>Made with <FcLike /> by Pawel Jaskolski </small>
+                    <small>Made with <FcLike /> by codeBasix </small>
                 </a>
             </div>
             <div className="row d-flex justify-content-center shadow mb-5 bg-light">
@@ -30,7 +30,7 @@ const NavigationBar = (props: NavigationBarProps) => {
                     </div>
                     <div className="row">
                         <NavLink exact to="/about" className="nav-text">
-                            <h4 className="font-weight-light pl-4 menu-underline left">About Us</h4>
+                            <h4 className="font-weight-light pl-4 menu-underline left">About Me</h4>
                         </NavLink>
                     </div>
                     <div className="row">
