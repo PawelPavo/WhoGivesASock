@@ -1,0 +1,20 @@
+$theme-colors: (
+    'primary': #1D5171,
+    'logo-blue': #0FBDE5,
+    'dark-blue': #005B9C,
+    'bg-color': #ddd6d3,
+    'light-yellow': #FDD8B5
+);
+
+body, html {
+    overflow-x: hidden;
+    background-image: url("https://whogivesasock.s3.us-east-2.amazonaws.com/gabrielle-henderson-RKHGV6ESIlo-unsplash.jpg");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+};
+
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
