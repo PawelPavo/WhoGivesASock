@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import NavigationDesktop from './components/NavigationDesktop';
 import NavigationBar from './components/Navigation';
 import About from './views/About';
 import Blog from './views/Blog';
@@ -10,7 +11,8 @@ import Partners from './views/Partners';
 const App = (props: AppProps) => {
 	return (
 		<BrowserRouter>
-			<NavigationBar />
+			{/* <NavigationBar /> */}
+			<NavigationDesktop />
 			<Switch>
 				<Route exact path="/">
 					<Home />

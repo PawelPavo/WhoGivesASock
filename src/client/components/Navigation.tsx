@@ -15,11 +15,11 @@ const NavigationBar = (props: NavigationBarProps) => {
                 </a>
             </div>
             <div className="row d-flex justify-content-center shadow mb-5 bg-light">
-                <div className="col-6 text-right my-auto">
+                <div className="col-6 my-auto">
                     <NavLink exact to="/">
                         <img
-                            style={{ height: "150px", width: "auto" }}
-                            src="https://whogivesasock.s3.us-east-2.amazonaws.com/Who_Gives_A_Sock_Logo_no_bg.png?versionId=NCw_QGnWd8zWUp1pPJ_26.pK_xHmA4G6" alt="WhoGivesASock-Logo" />
+                            style={{ height: "150px", width: "auto", borderRadius: "50%" }}
+                            src="https://instagram.fmia1-1.fna.fbcdn.net/v/t51.2885-15/e35/124201391_451127345869651_1415385177111669575_n.jpg?_nc_ht=instagram.fmia1-1.fna.fbcdn.net&_nc_cat=107&_nc_ohc=DLIcyPzjAqMAX9EjhsB&tp=18&oh=f5c0449bbe01f39a72f357a2913ec50a&oe=5FD5D397" alt="WhoGivesASock-Logo" />
                     </NavLink>
                 </div>
                 <div className="col-6 py-3 border border-bottom-0 border-top-0 border-right-0 my-3 border-primary">
