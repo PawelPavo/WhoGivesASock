@@ -58,7 +58,6 @@ const Home = (props: HomeProps) => {
                     </div>
                 </div>
             </div>
-
         </Layout>
     );
 };
@@ -112,7 +111,6 @@ const Layout = styled.div`
       font-size: 2.5rem;
     }
 }
-
 
 `
 

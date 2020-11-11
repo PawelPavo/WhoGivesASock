@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
-import { FaInstagram, FaBloggerB, FaPeopleCarry, FaPortrait } from 'react-icons/fa';
+import { FaInstagram, FaBloggerB, FaPeopleCarry, FaPortrait, FaHeart } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
 import styled from 'styled-components';
-import { FcLike } from 'react-icons/fc';
 
 const NavigationBar = (props: NavigationBarProps) => {
 
@@ -12,7 +11,7 @@ const NavigationBar = (props: NavigationBarProps) => {
             <div className="row justify-content-center">
                 <a href="http://paweljaskolski.com/" target="_blank">
                     <small className="text-muted made-by">
-                        Made with <FcLike /> CodeBasix
+                        Made with <span className=" heart-text"><FaHeart /></span> by CodeBasix
                     </small>
                 </a>
             </div>
@@ -49,6 +48,7 @@ const NavigationBar = (props: NavigationBarProps) => {
 };
 
 
+
 const Layout = styled.div`
 .nav-text {
     text-decoration: none;
@@ -63,6 +63,19 @@ const Layout = styled.div`
 .top-row {
     margin-top: 20px;
 }
+
+.heart-text {
+    color: red;
+    animation-name: heart;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes heart {
+    0%   {color: red;}
+    50%  {color: pink; }
+    100% {color: red;}
+  }
 
 `
 

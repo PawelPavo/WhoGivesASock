@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
-import { FaInstagram, FaRegEnvelope, FaRProject } from 'react-icons/fa';
+import { FaInstagram, FaRegEnvelope, FaHeart } from 'react-icons/fa';
 import styled from 'styled-components';
 import {FcLike} from 'react-icons/fc'
 
@@ -11,7 +11,7 @@ const NavigationDesktop = (props: NavigationDesktopProps) => {
             <div className="row justify-content-center">
                 <a href="http://paweljaskolski.com/" target="_blank">
                     <small className="text-muted">
-                        Made with <FcLike/> CodeBasix
+                        Made with <span className=" heart-text"><FaHeart/></span> by CodeBasix
                     </small>
                 </a>
             </div>
@@ -90,6 +90,20 @@ const Layout = styled.div`
     visibility: visible;
     width: 100%;
 }
+
+.heart-text {
+    color: red;
+    animation-name: heart;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes heart {
+    0%   {color: red;}
+    50%  {color: pink; }
+    100% {color: red;}
+  }
+
 `
 
 interface NavigationDesktopProps { }
