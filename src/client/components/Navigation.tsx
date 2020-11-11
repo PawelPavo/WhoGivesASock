@@ -1,19 +1,13 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaInstagram, FaBloggerB, FaPeopleCarry, FaPortrait } from 'react-icons/fa';
-import { FcLike } from 'react-icons/fc';
 import styled from 'styled-components';
 
 const NavigationBar = (props: NavigationBarProps) => {
 
     return (
         <Layout>
-            <div className="row d-flex justify-content-center sticky">
-                <a href="http://paweljaskolski.com/" target="_blank" className="text-muted">
-                    <small>Made with <FcLike /> by codeBasix </small>
-                </a>
-            </div>
-            <div className="row d-flex justify-content-center shadow mb-5 bg-bg-color fixed-top">
+            <div className="row d-flex justify-content-center shadow-lg bg-bg-color fixed-top top-row">
                 <div className="col-6 my-auto text-center">
                     <NavLink exact to="/">
                         <img
@@ -49,30 +43,10 @@ const Layout = styled.div`
     font-size: 1.5rem;
 }
 
-.icon {
-    color: #cfaf4d;
+.nav-text:hover {
+    color: white;
 }
 
-.menu-underline.left {
-    position: relative !important;
-}
-
-.menu-underline.left:before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 20px;
-  background-color: #7ed957;
-  visibility: hidden;
-  transition: all 0.5s ease-in-out;
-}
-
-.menu-underline.left:hover:before {
-    visibility: visible;
-    width: 85%;
-}
 `
 
 interface NavigationBarProps { }
