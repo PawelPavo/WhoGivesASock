@@ -1,19 +1,31 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
-import { FaInstagram } from 'react-icons/fa';
-import { FcLike } from 'react-icons/fc';
+import { FaInstagram, FaRegEnvelope, FaRProject } from 'react-icons/fa';
 import styled from 'styled-components';
+import {FcLike} from 'react-icons/fc'
 
 const NavigationDesktop = (props: NavigationDesktopProps) => {
 
     return (
         <Layout>
-            <div className="bg-bg-color shadow mt-2 fixed-top">
+            <div className="row justify-content-center">
+                <a href="http://paweljaskolski.com/" target="_blank">
+                    <small className="text-muted">
+                        Made with <FcLike/> CodeBasix
+                    </small>
+                </a>
+            </div>
+            <div className="bg-bg-color shadow mt-3 fixed-top">
                 <div className="row mx-5">
                     <div className="col-md-4 my-2">
-                    <a href="https://www.instagram.com/whogivesasock/" target="_blank" className="icon">
-                            <h4 className="my-auto"><FaInstagram /></h4>
-                        </a>
+                        <div className="row">
+                            <a href="https://www.instagram.com/whogivesasock/" target="_blank" className="icon">
+                                <h4 className="my-auto"><FaInstagram /></h4>
+                            </a>
+                            <a target="_blank" href="mailto:whogivesasock@gmail.com" className="icon">
+                                <h4 className="my-auto ml-3"><FaRegEnvelope /></h4>
+                            </a>
+                        </div>
                     </div>
                     <div className="col-md-8 my-auto">
                         <div className="row justify-content-between">

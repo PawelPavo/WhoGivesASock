@@ -1,12 +1,21 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaInstagram, FaBloggerB, FaPeopleCarry, FaPortrait } from 'react-icons/fa';
+import { FiMail } from 'react-icons/fi';
 import styled from 'styled-components';
+import { FcLike } from 'react-icons/fc';
 
 const NavigationBar = (props: NavigationBarProps) => {
 
     return (
         <Layout>
+            <div className="row justify-content-center">
+                <a href="http://paweljaskolski.com/" target="_blank">
+                    <small className="text-muted made-by">
+                        Made with <FcLike /> CodeBasix
+                    </small>
+                </a>
+            </div>
             <div className="row d-flex justify-content-center shadow-lg bg-bg-color fixed-top top-row">
                 <div className="col-6 my-auto text-center">
                     <NavLink exact to="/">
@@ -29,6 +38,9 @@ const NavigationBar = (props: NavigationBarProps) => {
                         <a href="https://www.instagram.com/whogivesasock/" target="_blank" className="nav-text">
                             <div className="font-weight-light"><FaInstagram /></div>
                         </a>
+                        <a target="_blank" href="mailto:whogivesasock@gmail.com" className="nav-text">
+                            <div className="font-weight-light"><FiMail /></div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -45,6 +57,11 @@ const Layout = styled.div`
 
 .nav-text:hover {
     color: white;
+    margin-top: 10px;
+}
+
+.top-row {
+    margin-top: 20px;
 }
 
 `
