@@ -1,8 +1,7 @@
 import * as React from 'react';
-import { IconContext } from 'react-icons/lib/esm/iconContext';
+import GoogleFontLoader from 'react-google-font-loader';
 import { FaSocks } from 'react-icons/fa';
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
 
 const Home = (props: HomeProps) => {
     const [greeting, setGreeting] = React.useState<string>('');
@@ -22,7 +21,16 @@ const Home = (props: HomeProps) => {
 
     return (
         <Layout>
-            <div className="container" style={{marginTop: "100px"}}>
+            <GoogleFontLoader
+                fonts={[
+                    {
+                        font: 'Playfair Display',
+                        weights: [400, '400i'],
+                    },
+                ]}
+                subsets={['cyrillic-ext', 'greek']}
+            />
+            <div className="container" style={{ marginTop: "100px" }}>
                 <div className="row justify-content-center mt-5 header-style">
                     <div className="col-md-12 text-center my-auto">
                         <div className="main-text header-style-mobile">
@@ -32,10 +40,10 @@ const Home = (props: HomeProps) => {
                     </div>
                 </div>
                 <div className="text-center text-primary mt-3">Providing brand new pairs of socks to thousands of New Yorkers living on the streets & in shelters.</div>
-                <div className="row row justify-content-center mt-3">
-                <a href="https://cash.app/$whogivesasock" target="_blank" type="button" className="btn btn-outline-primary px-5 py-2 shadow">Donate Today!</a>
+                <div className="row row justify-content-center mt-4">
+                    <a href="https://cash.app/$whogivesasock" target="_blank" type="button" className="btn btn-light-yellow px-5 py-2 shadow">Donate Today!</a>
                 </div>
-                <div className="card my-5 rounded-0 border-0 shadow bg-bg-color">
+                <div className="card my-5 rounded-0 border-0 shadow info-card border-light-yellow">
                     <div className="row no-gutters">
                         <div className="col-md-4 p-4">
                             <img src="https://instagram.fmia1-1.fna.fbcdn.net/v/t51.2885-15/e35/124201391_451127345869651_1415385177111669575_n.jpg?_nc_ht=instagram.fmia1-1.fna.fbcdn.net&_nc_cat=107&_nc_ohc=DLIcyPzjAqMAX8du-XE&tp=18&oh=618a9002b5ebabcbac2997ce7ccb0e7d&oe=5FD5D397" className="card-img" alt="LOGO" style={{ borderRadius: "50%" }} />
@@ -50,17 +58,18 @@ const Home = (props: HomeProps) => {
                     </div>
                 </div>
             </div>
+
         </Layout>
     );
 };
 
 const Layout = styled.div`
 
-@import url('https://fonts.googleapis.com/css?family=Nanum Pen Script');
+@import url('https://fonts.googleapis.com/css?family=Dancing Script');
 
 .main-text {
     font-size: 5rem;
-    font-family: 'Nanum Pen Script', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
     padding: 0;
     margin: 0;
 }
@@ -69,6 +78,10 @@ const Layout = styled.div`
     color: #cfaf4d;
     letter-spacing: 3px;
     font-weight: light;
+}
+
+.info-card {
+    background-color: rgba(221, 214, 211, 0.5);
 }
 
 .info-text {
@@ -90,7 +103,7 @@ const Layout = styled.div`
     border-width: 2px;
     border-left: 0;
     border-right: 0;
-    border-color: #ddd6d3;
+    border-color: #696463;
     color: #696463;
 }
 

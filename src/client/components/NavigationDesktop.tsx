@@ -5,7 +5,6 @@ import { FcLike } from 'react-icons/fc';
 import styled from 'styled-components';
 
 const NavigationDesktop = (props: NavigationDesktopProps) => {
-    const [greeting, setGreeting] = React.useState<string>('');
 
     return (
         <Layout>

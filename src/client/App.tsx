@@ -9,10 +9,20 @@ import Home from './views/Home';
 import Partners from './views/Partners';
 
 const App = (props: AppProps) => {
+
+	const [width, setWidth] = React.useState<number>(window.innerWidth);
+	const breakpoint = 576;
+
+    React.useEffect(() => {
+        const handleWindowResize = () => setWidth(window.innerWidth);
+        window.addEventListener('resize', handleWindowResize);
+
+        return () => window.removeEventListener('resize', handleWindowResize);
+    }, []);
+
 	return (
 		<BrowserRouter>
-			{/* <NavigationBar /> */}
-			<NavigationDesktop />
+			{ width < breakpoint ? <NavigationBar  /> : <NavigationDesktop />}
 			<Switch>
 				<Route exact path="/">
 					<Home />
