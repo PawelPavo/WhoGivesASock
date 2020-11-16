@@ -7,6 +7,7 @@ import Blog from './views/Blog';
 import Donate from './views/Donate';
 import Home from './views/Home';
 import Partners from './views/Partners';
+import Login from './views/Login';
 
 const App = (props: AppProps) => {
 
@@ -38,6 +39,9 @@ const App = (props: AppProps) => {
 				</Route>
 				<Route exact path="/about">
 					<About />
+				</Route>
+				<Route exact path="/login">
+					<Login />
 				</Route>
 			</Switch>
 
