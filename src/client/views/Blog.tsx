@@ -1,9 +1,10 @@
 import * as React from 'react';
-import NavigationBar from '../components/Navigation';
+import InstagramEmbed from 'react-instagram-embed';
 
 const Blog = (props: BlogProps) => {
     return (
         <>
+
             {/* <NavigationBar /> */}
             <div className="container">
                 <div className="row d-flex justify-content-center align-items-center font-weight-lighter text-primary bg-light p-5">
